@@ -14,6 +14,20 @@ export const ROUTE_DATA: RouteDataTypes[] = [
     id: 1,
     name: "Patient Register",
     element: ALL_PAGES_ELEMENT.PATIENT_REGISTER,
+    subelements: [
+      {
+        name: "Patient Details",
+        path: "/patient-register/patient-details",
+      },
+      {
+        name: "Assign Resources",
+        path: "/patient-register/assign-resources",
+      },
+      {
+        name: "Doctor Test Report",
+        path: "/patient-register/doctor-test-report",
+      },
+    ],
     path: PAGE_PATHS.PATIENT_REGISTER,
   },
   {

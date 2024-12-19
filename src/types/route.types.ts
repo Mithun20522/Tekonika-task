@@ -9,6 +9,10 @@ export type RouteDataTypes = {
   id: number;
   name: string;
   element: React.ComponentType<RouteComponentProps>;
-  subelements?: { name: string; path: string }[];
+  subelements?: {
+    name: string;
+    path: string;
+    element?: React.ComponentType<RouteComponentProps>;
+  }[];
   path: string;
 };

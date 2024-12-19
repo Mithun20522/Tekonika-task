@@ -1,6 +1,6 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import { ROUTE_DATA } from "./constants/routes.constants";
-import Header from "./components/header/Header";
+import Header from "./components/Header";
 
 export default function App() {
   return (

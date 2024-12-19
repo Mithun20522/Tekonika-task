@@ -8,7 +8,20 @@ export default function App() {
       <Header />
       <Routes>
         {ROUTE_DATA.map((route) => (
-          <Route key={route.id} path={route.path} element={<route.element />} />
+          <Route key={route.id} path={route.path} element={<route.element />}>
+            {route.subelements?.map((subelement, index) => (
+              <Route
+                key={`${route.id}-${index}`}
+                path={subelement.path}
+                element={
+                  <route.element
+                    routeName={subelement.name}
+                    parentName={route.name}
+                  />
+                }
+              />
+            ))}
+          </Route>
         ))}
       </Routes>
     </BrowserRouter>

@@ -1,19 +1,20 @@
 import React from "react";
 import { Link, useLocation } from "react-router-dom";
+import { PAGE_PATHS } from "../constants/url.constants";
 const steps = [
   {
     number: 1,
-    path: "/patient-register/patient-details",
+    path: PAGE_PATHS.PATIENT_DETAILS,
     label: "Patient Details",
   },
   {
     number: 2,
-    path: "/patient-register/assign-resources",
+    path: PAGE_PATHS.ASSIGN_RESOURCES,
     label: "Assign Resources",
   },
   {
     number: 3,
-    path: "/patient-register/doctor-test-report",
+    path: PAGE_PATHS.DOCTOR_TEST_REPORT,
     label: "Doctor Test Report",
   },
 ];

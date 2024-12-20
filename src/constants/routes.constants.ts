@@ -1,3 +1,6 @@
+import PatientForm from "../components/PatientForm";
+import AssignResources from "../screens/AssignResource";
+import DoctorTestReport from "../screens/DoctorTestReport";
 import { RouteDataTypes } from "../types/route.types";
 import { generateSubElements } from "../utils/route.utils";
 import { ALL_PAGES_ELEMENT } from "./pages.constants";
@@ -17,15 +20,18 @@ export const ROUTE_DATA: RouteDataTypes[] = [
     subelements: [
       {
         name: "Patient Details",
-        path: "/patient-register/patient-details",
+        path: PAGE_PATHS.PATIENT_DETAILS,
+        element: PatientForm,
       },
       {
         name: "Assign Resources",
-        path: "/patient-register/assign-resources",
+        path: PAGE_PATHS.ASSIGN_RESOURCES,
+        element: AssignResources,
       },
       {
         name: "Doctor Test Report",
-        path: "/patient-register/doctor-test-report",
+        path: PAGE_PATHS.DOCTOR_TEST_REPORT,
+        element: DoctorTestReport,
       },
     ],
     path: PAGE_PATHS.PATIENT_REGISTER,

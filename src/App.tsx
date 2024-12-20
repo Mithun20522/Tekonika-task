@@ -15,10 +15,17 @@ export default function App() {
                 key={`${route.id}-${index}`}
                 path={subelement.path}
                 element={
-                  <route.element
-                    routeName={subelement.name}
-                    parentName={route.name}
-                  />
+                  subelement.element ? (
+                    <subelement.element
+                      routeName={subelement.name}
+                      parentName={route.name}
+                    />
+                  ) : (
+                    <route.element
+                      routeName={subelement.name}
+                      parentName={route.name}
+                    />
+                  )
                 }
               />
             ))}

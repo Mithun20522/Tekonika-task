@@ -1,50 +1,36 @@
-# React + TypeScript + Vite
+# TEKONIKA TASK
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+I have completed the Task and have created responsive design across mobile and desktop both.
 
-Currently, two official plugins are available:
+## Tech stack
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- **State Management**: Redux and Redux Persist for persisting data even after page refresh.
+- **Styling**: Tailwind CSS for efficient and responsive design.
+- **Routing**: React Router DOM for routing, including nested routing.
+- **TypeScript**: Type safety.
+- **Structure**: Followed a modular, clean, and efficient project structure.
+- **Vercel**: Deployment.
 
-## Expanding the ESLint configuration
+## Project Links
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+- **Live Demo**: [https://tekonika-task.vercel.app/](https://tekonika-task.vercel.app/)
+- **GitHub Repository**: [https://github.com/Mithun20522/Tekonika-task](https://github.com/Mithun20522/Tekonika-task)
 
-- Configure the top-level `parserOptions` property like this:
+## How to Run the Project
 
-```js
-export default tseslint.config({
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
-```
+Follow these steps to run the project locally:
 
-- Replace `tseslint.configs.recommended` to `tseslint.configs.recommendedTypeChecked` or `tseslint.configs.strictTypeChecked`
-- Optionally add `...tseslint.configs.stylisticTypeChecked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and update the config:
+1. Clone the repository:
+   ```bash
+   git clone https://github.com/Mithun20522/Tekonika-task.git .
+   ```
+2. Install all dependencies for this project:
 
-```js
-// eslint.config.js
-import react from 'eslint-plugin-react'
+   ```bash
+   npm i
+   ```
 
-export default tseslint.config({
-  // Set the react version
-  settings: { react: { version: '18.3' } },
-  plugins: {
-    // Add the react plugin
-    react,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended rules
-    ...react.configs.recommended.rules,
-    ...react.configs['jsx-runtime'].rules,
-  },
-})
-```
+3. Run project:
+   ```bash
+   npm run dev
+   ```

@@ -1,7 +1,7 @@
 import { createSlice, PayloadAction } from "@reduxjs/toolkit";
 import { PatientFormStateType } from "../../types/store.types";
 
-const initialState: PatientFormStateType = {
+export const initialState: PatientFormStateType = {
   basicDetails: {
     firstName: "",
     lastName: "",

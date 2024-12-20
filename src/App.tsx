@@ -1,6 +1,7 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import { ROUTE_DATA } from "./constants/routes.constants";
 import Header from "./components/Header";
+import { Toaster } from "react-hot-toast";
 
 export default function App() {
   return (
@@ -24,6 +25,7 @@ export default function App() {
           </Route>
         ))}
       </Routes>
+      <Toaster position="top-right" />
     </BrowserRouter>
   );
 }

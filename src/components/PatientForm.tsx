@@ -1,39 +1,43 @@
 import { useState } from "react";
 import { useForm } from "react-hook-form";
+import toast from "react-hot-toast";
 
 const subOptions = ["Basic Details", "Legal Documents", "Demographics"];
-
+const defaultValues = {
+  firstName: "",
+  lastName: "",
+  mobileNo: "",
+  altMobileNo: "",
+  email: "",
+  dob: "",
+  age: "",
+  birthTime: "",
+  gender: "",
+  guardianName: "",
+  country: "India",
+  state: "",
+  district: "",
+  city: "",
+  fullAddress: "",
+  knowUs: "",
+  referFrom: "",
+  admissionType: "",
+};
 export default function PatientForm() {
   const [activeStep, setActiveStep] = useState<number>(0);
   const {
     register,
     handleSubmit,
+    reset,
     formState: { errors },
   } = useForm({
-    defaultValues: {
-      firstName: "",
-      lastName: "",
-      mobileNo: "",
-      altMobileNo: "",
-      email: "",
-      dob: "",
-      age: "",
-      birthTime: "",
-      gender: "",
-      guardianName: "",
-      country: "India",
-      state: "",
-      district: "",
-      city: "",
-      fullAddress: "",
-      knowUs: "",
-      referFrom: "",
-      admissionType: "",
-    },
+    defaultValues,
   });
 
   const onSubmit = (data: any) => {
     console.log(data);
+    toast.success("Step 1 completed");
+    reset(defaultValues);
   };
 
   return (

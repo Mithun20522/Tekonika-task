@@ -68,7 +68,7 @@ export default function Navigation() {
                   )}
                 </div>
               </NavLink>
-              {menu.subelements && (
+              {menu.subelements && menu.name !== "Patient Register" && (
                 <div>
                   <Dropdown
                     subelements={menu.subelements}

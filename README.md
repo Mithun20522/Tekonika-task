@@ -1,6 +1,6 @@
 # TEKONIKA TASK
 
-I have completed the Task and have created responsive design across mobile and desktop both.
+I have completed the Task and have created responsive design which support across mobile and desktop both.
 
 ## Tech stack
 
@@ -13,8 +13,8 @@ I have completed the Task and have created responsive design across mobile and d
 
 ## Project Links
 
-- **Live Demo**: [https://tekonika-task.vercel.app/](https://tekonika-task.vercel.app/)
-- **GitHub Repository**: [https://github.com/Mithun20522/Tekonika-task](https://github.com/Mithun20522/Tekonika-task)
+- **Live Demo**: <a href="https://tekonika-task.vercel.app/" target="_blank">https://tekonika-task.vercel.app/</a>
+- **GitHub Repository**: <a href="https://github.com/Mithun20522/Tekonika-task" target="_blank">https://github.com/Mithun20522/Tekonika-task</a>
 
 ## How to Run the Project
 
@@ -34,3 +34,6 @@ Follow these steps to run the project locally:
    ```bash
    npm run dev
    ```
+
+Best Regards,
+Mithun Verma

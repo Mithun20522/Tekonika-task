@@ -1,40 +1,40 @@
 import { useForm } from "react-hook-form";
 import FormActionButtons from "./ActionButtons";
-const defaultValues = {
-  firstName: "",
-  lastName: "",
-  mobileNo: "",
-  altMobileNo: "",
-  email: "",
-  dob: "",
-  age: "",
-  birthTime: "",
-  gender: "",
-  guardianName: "",
-  country: "India",
-  state: "",
-  district: "",
-  city: "",
-  fullAddress: "",
-  knowUs: "",
-  referFrom: "",
-  admissionType: "",
-};
+import { useDispatch, useSelector } from "react-redux";
+import { RootState } from "../redux/store";
+import { setBasicDetails } from "../redux/slices/patientSlice";
 
 export default function BasicDetailsForm({
   onSubmit,
   onSave,
   activeStep,
 }: any) {
+  const dispatch = useDispatch();
+  const basicDetails = useSelector(
+    (state: RootState) => state.patient.basicDetails
+  );
+
   const {
     register,
     handleSubmit,
     formState: { errors },
   } = useForm({
-    defaultValues,
+    defaultValues: basicDetails,
   });
+
+  const handleFormSubmit = (data: any) => {
+    console.log("Dispatching data:", data);
+    dispatch(setBasicDetails(data));
+    onSubmit(data);
+  };
+
+  const handleFormSave = (data: any) => {
+    dispatch(setBasicDetails(data));
+    if (onSave) onSave(data);
+  };
+
   return (
-    <form onSubmit={handleSubmit(onSubmit)}>
+    <form onSubmit={handleSubmit(handleFormSubmit)}>
       <div>
         <h1 className="font-semibold mt-5">Patient Details</h1>
         <div className="mt-3">
@@ -421,8 +421,8 @@ export default function BasicDetailsForm({
         </div>
       </div>
       <FormActionButtons
-        onSave={handleSubmit(onSave)}
-        onContinue={handleSubmit(onSubmit)}
+        onSave={handleSubmit(handleFormSave)}
+        onContinue={handleSubmit(handleFormSubmit)}
         isLastStep={activeStep === 2}
       />
     </form>
